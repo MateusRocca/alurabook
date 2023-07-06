@@ -1,0 +1,154 @@
+.cabecalho__menu-hamburguer  {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../img/Menuaberto.svg");
+}
+.container__botao:checked ~ .container__rotulo {
+    background: var(--cor-degrade);
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* para liberar o position absolute*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    /* esse código é para a lista do menu não ficar visivel*/
+    display: none;
+    position: absolute; /* esse faz com que a lista fiquei para baixo do topo */
+    top: 100%;
+    width: 60vw;
+
+}
+
+.lista-menu__link {
+    background: var(--cor-degrade);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none; /* a caixa de seleção do botão menu não fica aparecendo */
+}
+
+.container__botao:checked ~.lista-menu {
+    /* esse código é para a lista do menu aparecer quando o check selecionar*/
+    display: block;
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    background-color: var(--branco);
+    padding: 1em;
+    
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.container__titulo,
+.opcões {
+    display: none;
+}
+.container__textos {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 3em
+    }
+    .container__titulo, 
+    .container__titulo-negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+    .opcões {
+        display: flex;
+        text-align: justify;
+    }
+
+    .opcões__item {
+        text-transform: uppercase;
+        padding: 2em 1em;
+    }
+
+    .opcões__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabecalho__menu-hamburguer, 
+    .container__imagem-transparente, 
+    .opcões__botão {
+        display: none;
+    }
+
+    .opcões__botão:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcões__botão-label {
+        padding: 2em;
+    }
+    .opcões__botão:checked ~ .opcões__botão-label {
+        background: var(--cor-degrade);
+        color: var(--branco);
+    }
+    .lista-menu__item:hover {
+        background: var(--cor-degrade);
+    }
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .container__textos {
+        color: var(--preto);
+        display: block;
+        font-size: 20px;
+    }
+    .opcões{
+        margin-right: auto;
+    }
+
+ 
+
+}

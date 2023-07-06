@@ -1,0 +1,32 @@
+/*O import dos outros arquivos css por aqui torna o carregamento mais rápido. E se não importar aqui, não funciona*/
+@import url("Style/header.css");
+@import url("Style/banner.css");
+@import url("Style/carrossel.css");
+@import url("Style/topicos.css");
+@import url("Style/contato.css");
+@import url("Style/rodape.css");
+
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #ffffff;
+    --laranja: #EB9B00;
+    --cor-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: rgba(0, 47, 82, 1);
+    --fonte-secundaria: "Josefin Sans";
+    --preto: #000000;
+    --cinza: rgba(133, 133, 133, 1);
+    --cor-rodape: rgba(71, 70, 70, 1);
+
+
+
+
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
